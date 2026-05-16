@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Bible Verse — Today's Scripture in English & Telugu</title>
+  <meta name="description" content="A new Bible verse every day in English and Telugu. Cycles through 365 carefully selected scriptures without repeating.">
+  <meta property="og:title" content="Daily Bible Verse — English & Telugu">
+  <meta property="og:description" content="A new Bible verse every day in both English and Telugu.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#07070d">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Mandali&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient star particles -->
+  <div class="stars" id="stars"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+        <path d="M12 6v7"/>
+        <path d="M9 9.5h6"/>
+      </svg>
+    </div>
+    <h1 class="header__title">Daily Bible Verse</h1>
+    <p class="header__subtitle">నేటి బైబిల్ వచనం</p>
+    <div class="divider">
+      <span class="divider__line"></span>
+      <span class="divider__dot"></span>
+      <span class="divider__line"></span>
+    </div>
+    <time class="header__date" id="currentDate"></time>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <article class="card" id="verseCard">
+      <!-- English -->
+      <div class="verse-section">
+        <div class="verse-label">English</div>
+        <p class="verse-en" id="verseEnglish"></p>
+      </div>
+
+      <!-- Telugu -->
+      <div class="verse-section">
+        <div class="verse-label">తెలుగు</div>
+        <p class="verse-te" id="verseTelugu"></p>
+      </div>
+
+      <!-- Reference -->
+      <div class="reference">
+        <span class="reference__en" id="refEnglish"></span>
+        <span class="reference__te" id="refTelugu"></span>
+      </div>
+    </article>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button class="btn" id="shareBtn" aria-label="Share this verse">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+        </svg>
+        Share Verse
+      </button>
+      <button class="btn" id="copyBtn" aria-label="Copy verse text">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+        Copy
+      </button>
+    </div>
+
+
+  </main>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast">Copied to clipboard ✓</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__text">
+      New verse on every refresh · Curated collection<br>
+      English: KJV · Telugu: Telugu Bible
+    </p>
+  </footer>
+
+  <script src="verses.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
